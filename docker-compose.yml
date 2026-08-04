@@ -2,9 +2,7 @@ services:
 
   mysql:
     image: mysql:8.4
-
     container_name: wa-mysql
-
     restart: unless-stopped
 
     environment:
@@ -32,9 +30,7 @@ services:
 
   adminer:
     image: adminer:5
-
     container_name: wa-adminer
-
     restart: unless-stopped
 
     ports:
@@ -53,7 +49,6 @@ services:
       dockerfile: docker/php/Dockerfile
 
     container_name: wa-php
-
     restart: unless-stopped
 
     ports:
@@ -73,11 +68,16 @@ services:
       mysql:
         condition: service_healthy
 
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
     networks:
       - whatsapp-network
 
 volumes:
+
   mysql_data:
 
 networks:
+
   whatsapp-network:

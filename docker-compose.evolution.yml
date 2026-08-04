@@ -2,7 +2,6 @@ services:
 
   postgres:
     image: postgres:16
-
     container_name: wa-postgres
 
     restart: unless-stopped
@@ -20,7 +19,6 @@ services:
 
   redis:
     image: redis:7-alpine
-
     container_name: wa-redis
 
     restart: unless-stopped
@@ -35,7 +33,6 @@ services:
 
   evolution-api:
     image: evoapicloud/evolution-api:latest
-
     container_name: wa-evolution
 
     restart: unless-stopped
@@ -55,6 +52,7 @@ services:
 
     networks:
       - evolution-network
+      - ai-network
 
 volumes:
 
@@ -67,3 +65,6 @@ volumes:
 networks:
 
   evolution-network:
+
+  ai-network:
+    external: true
