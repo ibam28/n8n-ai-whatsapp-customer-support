@@ -1,0 +1,30 @@
+# Environment
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Database
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+
+# Docker volumes
+mysql_data/
+n8n_data/
+ollama_data/
+evolution_data/
+
+# PHP
+vendor/
+
+# Temporary
+tmp/
+cache/
