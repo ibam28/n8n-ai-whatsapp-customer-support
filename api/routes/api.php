@@ -7,6 +7,7 @@ require_once __DIR__ . '/../responses/Response.php';
 require_once __DIR__ . '/../controllers/HealthController.php';
 require_once __DIR__ . '/../controllers/CustomerController.php';
 require_once __DIR__ . '/../controllers/ConversationController.php';
+require_once __DIR__ . '/../controllers/MessageController.php';
 
 $routes = [
 
@@ -17,6 +18,8 @@ $routes = [
     '/customers' => [CustomerController::class, 'index'],
 
     '/conversations' => [ConversationController::class, 'index'],
+
+    '/messages' => [MessageController::class, 'index'],
 
 ];
 
