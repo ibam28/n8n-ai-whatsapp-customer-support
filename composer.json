@@ -1,0 +1,18 @@
+{
+    "name": "ibam28/n8n-ai-whatsapp-customer-support",
+    "description": "AI-powered WhatsApp customer support automation using n8n, Evolution API, Ollama, Docker, MySQL, and PHP REST API.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bambang Saputra Jaya",
+            "homepage": "https://github.com/ibam28"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "api/"
+        }
+    },
+    "require": {}
+}

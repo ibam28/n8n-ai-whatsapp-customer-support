@@ -6,6 +6,7 @@ require_once __DIR__ . '/../responses/Response.php';
 
 require_once __DIR__ . '/../controllers/HealthController.php';
 require_once __DIR__ . '/../controllers/CustomerController.php';
+require_once __DIR__ . '/../controllers/ConversationController.php';
 
 $routes = [
 
@@ -14,6 +15,8 @@ $routes = [
     '/health' => [HealthController::class, 'index'],
 
     '/customers' => [CustomerController::class, 'index'],
+
+    '/conversations' => [ConversationController::class, 'index'],
 
 ];
 
@@ -24,6 +27,8 @@ if (isset($routes[$path])) {
     [$controller, $method] = $routes[$path];
 
     (new $controller())->$method();
+
+    exit;
 }
 
 Response::json([
