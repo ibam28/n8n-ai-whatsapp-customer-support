@@ -1,12 +1,14 @@
 # 🤖 n8n AI WhatsApp Customer Support
 
-> AI-powered WhatsApp Customer Support Automation built with **n8n**, **Evolution API**, **Ollama**, **Docker**, **MySQL**, and **PHP REST API**.
+> AI-powered WhatsApp Customer Support platform built with **n8n**, **Evolution API**, **Ollama**, **Docker**, **MySQL**, and **PHP REST API**.
 
-![Project Thumbnail](docs/thumbnail.png)
+<p align="center">
+  <img src="docs/thumbnail.png" alt="Project Thumbnail" width="100%">
+</p>
 
 <p align="center">
 
-![Status](https://img.shields.io/badge/status-active%20development-success)
+![Status](https://img.shields.io/badge/status-beta-yellow)
 ![Version](https://img.shields.io/badge/version-v1.0.0--alpha-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![PHP](https://img.shields.io/badge/PHP-8.3-777BB4)
@@ -17,58 +19,35 @@
 
 ---
 
-## 🚀 Project Overview
+# 🚀 Project Overview
 
-This project demonstrates how to build a complete AI-powered WhatsApp Customer Support platform using **n8n**, **Evolution API**, **Ollama**, **Docker**, **MySQL**, and **PHP REST API**.
+This project demonstrates how to build a self-hosted AI-powered WhatsApp Customer Support platform using open-source technologies.
 
-Incoming WhatsApp messages are received through Evolution API, processed by n8n workflows, enriched with customer and conversation data stored in MySQL, answered by Ollama AI, and automatically sent back to customers.
+Incoming WhatsApp messages are intended to be received through Evolution API, processed by n8n workflows, enriched with customer and conversation data stored in MySQL, answered by Ollama AI, and automatically sent back to customers.
 
-The project is designed as a production-ready portfolio demonstrating backend architecture, workflow automation, REST API development, Docker deployment, and AI integration.
+The project focuses on backend architecture, workflow automation, REST API development, Docker deployment, and local AI integration.
 
 ---
 
-## ✨ Key Features
+# ✨ Highlights
 
-- 🤖 AI-generated WhatsApp replies
+- 🤖 Self-hosted AI platform
 - 💬 WhatsApp automation
-- ⚡ Workflow automation with n8n
-- 🧠 Local AI using Ollama
-- 🗄️ MySQL conversation storage
+- ⚡ n8n workflow automation
+- 🧠 Local LLM using Ollama
 - 🐘 PHP REST API
+- 🗄️ MySQL database
 - 🐳 Docker deployment
-- 👤 Customer management
-- 💬 Conversation management
+- 📈 Scalable architecture
 - 🤝 Human handover ready
-- 📚 Knowledge Base (RAG) ready
-- 📈 CRM integration ready
+- 📚 RAG-ready architecture
 
 ---
 
-## 🎯 Skills Demonstrated
-
-- Backend API Development
-- Docker Containerization
-- PHP OOP
-- MySQL Database Design
-- Workflow Automation (n8n)
-- AI Integration (Ollama)
-- REST API Development
-- Software Architecture
-
----
-
-## 🏗️ System Architecture
-
-![System Architecture](docs/architecture-diagram.png)
-
-The platform receives incoming WhatsApp messages through Evolution API. n8n orchestrates the workflow, communicates with the PHP REST API, stores customer and conversation data in MySQL, generates AI responses using Ollama, and sends replies back to customers automatically.
-
----
-
-## 🛠 Technology Stack
+# 🛠 Technology Stack
 
 | Category | Technology |
-|-----------|------------|
+|----------|------------|
 | Workflow Automation | n8n |
 | Messaging | Evolution API |
 | AI | Ollama |
@@ -79,61 +58,119 @@ The platform receives incoming WhatsApp messages through Evolution API. n8n orch
 
 ---
 
-## 📊 Project Status
+# 📊 Project Status
 
-- [x] Documentation
-- [x] Infrastructure
-- [x] Docker Environment
-- [x] PHP REST API
-- [x] MySQL Database
-- [x] Customer API
-- [ ] Evolution API Integration
-- [ ] n8n Workflow
-- [ ] AI Integration
-- [ ] Conversation Memory
-- [ ] Human Handover
-- [ ] CRM Integration
+| Component | Status |
+|-----------|--------|
+| Documentation | ✅ Completed |
+| Docker Infrastructure | ✅ Completed |
+| PHP REST API | ✅ Completed |
+| MySQL Database | ✅ Completed |
+| Customer API | ✅ Completed |
+| Evolution API Deployment | ✅ Completed |
+| WhatsApp Connection | ✅ Completed |
+| Webhook Validation | ✅ Completed |
+| Automatic WhatsApp Events | 🚧 In Progress |
+| n8n AI Workflow | ⏳ Planned |
+| Ollama Integration | ⏳ Planned |
 
 ---
 
-## 📁 Project Structure
+# ⚠️ Current Status
 
-```text
-.
-├── api/
-│   ├── config/
-│   ├── controllers/
-│   ├── helpers/
-│   ├── models/
-│   ├── responses/
-│   ├── routes/
-│   └── index.php
-│
-├── database/
-│   └── init/
-│       ├── 01-schema.sql
-│       └── 02-sample-data.sql
-│
-├── docker/
-│   ├── evolution/
-│   └── php/
-│
-├── docs/
-│   ├── thumbnail.png
-│   ├── architecture-diagram.png
-│   └── screenshots/
-│
-├── workflows/
-├── docker-compose.yml
-├── README.md
-└── LICENSE
+The infrastructure has been successfully deployed and validated.
+
+The following components have been confirmed working:
+
+- Docker infrastructure
+- n8n server
+- MySQL database
+- PHP REST API
+- Evolution API deployment
+- WhatsApp connection
+- Production webhook endpoint
+- Manual webhook delivery
+
+The automatic webhook dispatch from Evolution API to n8n is currently under investigation.
+
+This project remains under active development.
+
+Detailed investigation notes are available in:
+
+```
+docs/whatsapp/troubleshooting.md
 ```
 
 ---
 
-## 🚀 Quick Start
+# 🏗️ System Architecture
 
-### Clone Repository
+<p align="center">
+  <img src="docs/architecture-diagram.png" alt="System Architecture" width="100%">
+</p>
+
+```
+WhatsApp
+      │
+      ▼
+Evolution API
+      │
+      ▼
+n8n
+      │
+      ▼
+PHP REST API
+      │
+      ▼
+MySQL
+      │
+      ▼
+Ollama
+      │
+      ▼
+WhatsApp Reply
+```
+
+---
+
+# 📁 Project Structure
+
+```text
+.
+├── api/
+├── database/
+├── docker/
+├── docs/
+│   ├── whatsapp/
+│   │   ├── architecture.md
+│   │   ├── installation.md
+│   │   ├── workflow.md
+│   │   ├── troubleshooting.md
+│   │   └── roadmap.md
+│   │
+│   ├── screenshots/
+│   ├── architecture-diagram.png
+│   └── thumbnail.png
+│
+├── workflows/
+├── docker-compose.yml
+├── docker-compose.evolution.yml
+└── README.md
+```
+
+---
+
+# 🚀 Quick Start
+
+## Requirements
+
+- Docker
+- Docker Compose
+- Git
+
+---
+
+## Clone Repository
 
 ```bash
 git clone git@github.com:ibam28/n8n-ai-whatsapp-customer-support.git
@@ -141,166 +178,130 @@ git clone git@github.com:ibam28/n8n-ai-whatsapp-customer-support.git
 cd n8n-ai-whatsapp-customer-support
 ```
 
-### Configure Environment
+---
+
+## Configure Environment
 
 ```bash
 cp .env.example .env
+cp .env.evolution.example .env.evolution
 ```
 
-### Start Containers
+---
+
+## Start REST API
 
 ```bash
 docker compose up -d --build
 ```
 
-### Verify Running Containers
+---
+
+## Start Evolution API
+
+```bash
+docker compose -f docker-compose.evolution.yml up -d
+```
+
+---
+
+## Verify Containers
 
 ```bash
 docker ps
 ```
 
-Expected services:
+Expected services
 
 - MySQL
 - Adminer
-- PHP REST API
-
-### Open Services
-
-| Service | URL |
-|----------|-----|
-| PHP REST API | http://localhost:8080 |
-| Adminer | http://localhost:8081 |
+- PHP
+- Evolution API
+- PostgreSQL
+- Redis
 
 ---
 
-## ⚙️ Environment Variables
+# 🌐 REST API
 
-Create a `.env` file using:
+Current endpoints
 
-```bash
-cp .env.example .env
-```
+| Method | Endpoint |
+|---------|----------|
+| GET | / |
+| GET | /health |
+| GET | /customers |
 
-Main configuration:
-
-| Variable | Description |
-|-----------|-------------|
-| TZ | Server timezone |
-| MYSQL_ROOT_PASSWORD | MySQL root password |
-| MYSQL_DATABASE | Database name |
-| MYSQL_USER | Database username |
-| MYSQL_PASSWORD | Database password |
-| DB_HOST | PHP database host |
-| DB_NAME | PHP database name |
-| DB_USER | PHP database username |
-| DB_PASSWORD | PHP database password |
-| OLLAMA_MODEL | Ollama AI model |
-| EVOLUTION_API_KEY | Evolution API key |
-| N8N_SECURE_COOKIE | n8n secure cookie |
-| GENERIC_TIMEZONE | n8n timezone |
+More endpoints will be added in future versions.
 
 ---
 
-## 🌐 REST API
+# 🗄 Database
 
-Current endpoints:
-
-| Method | Endpoint | Description |
-|---------|----------|-------------|
-| GET | `/` | Project status |
-| GET | `/health` | Health check |
-| GET | `/customers` | List customers |
-
-Planned endpoints:
-
-- POST /customers
-- GET /conversations
-- POST /conversations
-- GET /messages
-- POST /messages
-
----
-
-## 🗄️ Database
-
-Current database tables:
+Current tables
 
 - customers
 - conversations
 - messages
 
-Initialization scripts:
+Database initialization
 
-```text
+```
 database/init/
-├── 01-schema.sql
-└── 02-sample-data.sql
+
+01-schema.sql
+02-sample-data.sql
 ```
 
-The database is automatically initialized during the first MySQL container startup.
-
 ---
 
-## 📚 Documentation
+# 📚 Documentation
 
-Additional documentation will be available in the `docs/` directory.
+Detailed documentation
 
-- Architecture Diagram
-- Database Design
-- API Design
+- WhatsApp Architecture
 - Installation Guide
-- Workflow Screenshots
+- Workflow Design
+- Troubleshooting
 - Development Roadmap
 
+Located in
+
+```
+docs/whatsapp/
+```
+
 ---
 
-## 🛣️ Development Roadmap
+# 🛣️ Roadmap
 
-### Version 1.0
+## Version 1
 
-- [x] Docker Environment
-- [x] PHP REST API
-- [x] MySQL Database
-- [x] Customer API
-- [ ] Evolution API Integration
+- [x] Docker Infrastructure
+- [x] REST API
+- [x] Database
+- [x] Customer Management
+- [x] Evolution API Deployment
+- [x] WhatsApp Connection
+- [ ] Automatic WhatsApp Events
 - [ ] n8n Workflow
-- [ ] Ollama AI Integration
+- [ ] AI Integration
 
-### Version 2.0
+---
+
+## Version 2
 
 - [ ] Conversation Memory
 - [ ] Human Handover
 - [ ] CRM Integration
 - [ ] Knowledge Base (RAG)
-- [ ] Dashboard & Analytics
-
----
-## WhatsApp Integration
-
-The project includes an Evolution API integration for WhatsApp automation.
-
-Current implementation includes:
-
-- Dockerized Evolution API
-- PostgreSQL
-- Redis
-- n8n Webhook Integration
-- Production Webhook Validation
-- WhatsApp Session Management
-
-> **Known Issue**
->
-> During testing with Evolution API v2.3.7, manual webhook requests succeed while automatic webhook dispatch from Evolution API returns HTTP 404. The integration architecture and troubleshooting process are fully documented in `docs/whatsapp/troubleshooting.md`.
+- [ ] Dashboard
+- [ ] Analytics
 
 ---
 
-## 📄 License
+# 📄 License
 
-This project is licensed under the **MIT License**.
+This project is licensed under the MIT License.
 
-See the **LICENSE** file for more information.
-
----
-
-⭐ If you find this project useful, consider giving it a star on GitHub.
+See the LICENSE file for details.
