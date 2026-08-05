@@ -80,7 +80,7 @@ n8n receives:
 
 ```json
 {
-  "from": "6281371665540",
+  "from": "628111111111",
   "message": "Hello"
 }
 ```
@@ -92,7 +92,7 @@ n8n receives:
 The system checks customer data:
 
 ```
-GET /customers?phone=6281371665540
+GET /customers?phone=628111111111
 ```
 
 If customer does not exist:
@@ -288,7 +288,7 @@ Response:
 
 
 ```
-GET /customers?phone=6281371665540
+GET /customers?phone=628111111111
 ```
 
 
@@ -298,7 +298,7 @@ Response:
 {
  "exists":1,
  "name":"BAMBANG",
- "phone":"6281371665540"
+ "phone":"628111111111"
 }
 ```
 
@@ -318,7 +318,7 @@ Request:
 ```json
 {
  "name":"BAMBANG",
- "phone":"6281371665540"
+ "phone":"628111111111"
 }
 ```
 
