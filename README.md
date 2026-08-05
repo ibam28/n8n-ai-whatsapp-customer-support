@@ -230,8 +230,8 @@ Example:
 
 ```json
 {
-  "name": "BAMBANG",
-  "phone": "6281371665540"
+  "name": "John Doe",
+  "phone": "628111111111"
 }
 ```
 
